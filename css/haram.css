@@ -1,0 +1,51 @@
+.body{
+	max-width:1920px;
+	min-width:1920px;
+}
+.title_span{
+	letter-spacing:0.12em; 
+	line-height:0.072em;
+}
+.title_span02{
+	letter-spacing:0.1em; 
+}
+.font01{
+	font-size:18pt;
+	line-height:0.027em;
+}
+.font02{
+	font-size:16pt;
+	line-height:0.027em;
+}
+.font03{
+	font-size:16pt;
+	line-height:0.03em;
+}
+.font04{
+	font-size:14pt;
+}
+.font05{
+	font-size:14pt;
+	text-decoration:underline;
+}
+.font06{
+	font-size:14pt;
+	line-height:0.024em;
+}
+.font07{
+	font-size:22pt;
+	text-decoration:underline;
+}
+li{
+	position:relative;
+}
+.mouse_over1:hover{
+	color:#ff3333;
+}
+.mouse_over2:hover{
+	color:#0099ff;
+}
+.mouse_over1, .mouse_over2{
+	font-weight:bold;
+	cursor:pointer;
+}
