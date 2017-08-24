@@ -6,7 +6,12 @@ window.onload = function() {
 
 	
 google.maps.event.addDomListener(window, 'load', initialize);
-
+/**
+ * 작성일 : 2017.08.24
+ * 함수명 : initialize
+ * 작성자 : 송하람
+ * 설명 : 구글맵연동관련 소스
+ */
 function initialize() {
     var mapLocation = new google.maps.LatLng('37.5764834', '127.00144539999997'); // 지도에서 가운데로 위치할 위도와 경도
     var markLocation = new google.maps.LatLng('37.5764834', '127.00144539999997'); // 마커가 위치할 위도와 경도
@@ -92,7 +97,7 @@ function animate_image(i, param_id, div_id){
 	
 }
 /**
- * 작성일 : 2017.03.07
+ * 작성일 : 2017.08.24
  * 함수명 : intervalPlay
  * 작성자 : 송하람
  * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다.
@@ -116,7 +121,7 @@ function intervalPlay(start_num) {
 }
 
 /**
- * 작성일 : 2017.03.07
+ * 작성일 : 2017.08.24
  * 함수명 : stop_interval
  * 작성자 : 송하람
  * 설명 :  중지하고 mouse over한 시점부터 다시 시작
