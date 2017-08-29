@@ -39,12 +39,12 @@
 li{
 	position:relative;
 }
-.mouse_over1:hover{
-	color:#ff3333;
-}
-.mouse_over2:hover{
-	color:#0099ff;
-}
+/* .mouse_over1:hover{ */
+/* 	color:#ff3333; */
+/* } */
+/* .mouse_over2:hover{ */
+/* 	color:#0099ff; */
+/* } */
 .mouse_over1, .mouse_over2{
 	font-weight:bold;
 	cursor:pointer;

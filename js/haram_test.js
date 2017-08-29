@@ -1,10 +1,63 @@
 
 var personTimerId;
+var portfolioTimerId;
+
+var person_end_num = 29;
+
+var workArr = ["illurstrator1", "illurstrator2", "illurstrator3", "editorial1", "editorial2", "editorial3", "brand1", "brand2", "brand3", "ux1", "ux2", "ux3"];
+var classNumArr = {"illurstrator": 0, "editorial": 3, "brand": 6, "ux":9};
+
 window.onload = function() {
-	intervalPlay(1);
+	intervalPlay01(1, person_end_num, 'person');
+	intervalPlay02(0);
+
+	var se = document.getElementsByClassName('slideEvent');
+	
+	for(var i= 0; i < se.length; i++) {
+		var  idx = i;
+		(function() {
+			se[idx].onmouseover = function() {
+				var idx = this.id.replace(/[a-z]/gi, "");
+				var param_id = this.id.replace(/[0-9]/g,"");
+				
+				//각 사진의 갯수를 여기서 넣어줬다.
+				var end = person_end_num;
+				stop_interval01(idx, end , param_id);
+			}
+		})();
+	}
+	
+	
+	var se2 = document.getElementsByClassName('slideEvent2');
+	for(var j= 0; j < se2.length; j++) {
+		var  idx2 = j;
+		(function() {
+			se2[idx2].onmouseover = function() {
+				var number = classNumArr[this.id];
+				stop_interval02(number);
+			}
+		})();
+	}
+	
+	var se3 = document.getElementsByClassName('slideEvent3');
+	for(var j= 0; j < se3.length; j++) {
+		var idx3 = j;
+		var stop_num;
+		(function() {
+			se3[idx3].onmouseover = function() {
+				for(var z = 0; z < workArr.length; z++) {
+					if (this.id == workArr[z]) {
+						stop_num = z;
+						break;
+					}
+				}
+				stop_interval02(stop_num);
+			}
+		})();
+	}
+	
 };
 
-	
 google.maps.event.addDomListener(window, 'load', initialize);
 /**
  * 작성일 : 2017.08.24
@@ -42,8 +95,8 @@ function initialize() {
            title: '홍익대 대학로 아트센터' // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
     });
  
-        google.maps.event.addListener(marker, "click", function() {
-    infowindow.open(map,marker);
+    google.maps.event.addListener(marker, "click", function() {
+    	infowindow.open(map,marker);
     });
 }
 
@@ -85,56 +138,125 @@ function fadeIn( elem, ms )
  * 작성자 : 송하람
  * 설명 : 이미지가 나타나는 함수
  */
-function animate_image(i, param_id, div_id){
-
-		var id = param_id + i;
-		
-		var img_src = '../img/' + id + '.jpg';
-		var img_div = document.getElementById(div_id);
-		
-		img_div.src = img_src;
-		fadeIn(img_div, 400);
+function animate_image(param_id, div_id, color){
+	var nodes = document.getElementById(param_id).parentNode.parentNode.parentNode.querySelectorAll("ul > li > span");
+	for(var i = 0; i < nodes.length; i++) {
+		nodes[i].style.color = "black";
+	}
 	
+
+	document.getElementById(param_id).style.color = color;
+	var img_src = '../img/' + param_id + '.jpg';
+	var img_div = document.getElementById(div_id);
+	
+	img_div.src = img_src;
+	fadeIn(img_div, 400);
 }
 /**
  * 작성일 : 2017.08.24
- * 함수명 : intervalPlay
+ * 함수명 : intervalPlay01
  * 작성자 : 송하람
- * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다.
+ * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다. - 사람
  */
-function intervalPlay(start_num) {
-	i = start_num;
+function intervalPlay01(start_num, end_num, img_type) {
+	var i = start_num;
+	var div_id = img_type + "_img";
+	var img_id = img_type + (i++) + "";
 	
-	animate_image(i++, 'person', 'portfolio_img2');
+	//사진 돌아가면서
+	animate_image(img_id, div_id, '#ff3333');
+	
 	personTimerId = setInterval(function() {
-		//사람사진 돌아가면서
-		  if(i < 11){
-		      //반복할 실행문
-			  animate_image(i, 'person', 'portfolio_img2');
-			  i++;
-		  }
-		  else {
-			  i = 1;
-		  }
+      //반복할 실행문
+	  if (i == end_num) {
+		  img_id  = img_type + (i);
+		  i = 1;
+	  }
+	  else {
+		  img_id  = img_type + (i++);
+	  }
+	  
+	  animate_image(img_id, div_id, '#ff3333');
 		  
 	}, 1800);
+	
+}
+/**
+ * 작성일 : 2017.08.25
+ * 함수명 : intervalPlay02
+ * 작성자 : 송하람
+ * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다. - 작품
+ */
+function intervalPlay02(start_num) {
+	var i = start_num;
+	var div_id = "port_img";
+	var img_id = workArr[i++] + "";
+	var end_num = workArr.length;
+	
+	//사진 돌아가면서
+	animate_image(img_id, div_id, '#0099ff');
+	play_work(img_id);
+	
+	portfolioTimerId = setInterval(function() {
+	  //반복할 실행문
+		  if (i == (end_num-1)) {
+			  img_id  = workArr[i];
+			  i = 0;
+		  }
+		  else {
+			  img_id  = workArr[i++];
+		  }
+	  
+		
+		play_work(img_id);
+		animate_image(img_id, div_id, '#0099ff');
+		  
+	}, 1800);
+	
+}
+/**
+ * 작성일 : 2017.08.25
+ * 함수명 : play_work
+ * 작성자 : 송하람
+ * 설명 : 포트폴리오 이벤트 
+ */
+function play_work(img_id) {
+	var img_id2 = img_id.replace(/[0-9]/g,"");
+	var nodes = document.getElementById(img_id2).parentNode.querySelectorAll(".mouse_over1");
+	for(var j = 0; j < nodes.length; j++) {
+		 nodes[j].style.color = "black";
+	}
+	
+	var list_nodes = document.querySelectorAll("#port_list ul");
+	for(var j = 0; j < list_nodes.length; j++) {
+		list_nodes[j].style.display = "none";
+	}
+	img_id2 = img_id.replace(/[0-9]/g,"");
+	var list_id = img_id2 + "_ul";
+	var list = document.getElementById(list_id);
+	list.style.display="block";
+	
+	document.getElementById(img_id2).style.color = '#0099ff';
 }
 
 /**
  * 작성일 : 2017.08.24
- * 함수명 : stop_interval
+ * 함수명 : stop_interval01
  * 작성자 : 송하람
- * 설명 :  중지하고 mouse over한 시점부터 다시 시작
+ * 설명 :  중지하고 mouse over한 시점부터 다시 시작-사람
  */
-function stop_interval(elm_id, type){
-	var end;
-	var param_id;
-	//사람의 숫자
-	if (type == 0 ) {
-		param_id = 'person';
-	}
-	var id_num = elm_id.replace(/[^0-9]/g,"");
+function stop_interval01(id_num, end, param_id){
 	clearInterval(personTimerId); 
-	
-	intervalPlay(id_num);
+	intervalPlay01(id_num, end, param_id);
+}
+
+/**
+ * 작성일 : 2017.08.24
+ * 함수명 : stop_interval02
+ * 작성자 : 송하람
+ * 설명 :  중지하고 mouse over한 시점부터 다시 시작-작품
+ */
+function stop_interval02 (id_num) {
+	clearInterval(portfolioTimerId); 
+	intervalPlay02(id_num);
 }
