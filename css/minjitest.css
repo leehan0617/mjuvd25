@@ -1,0 +1,152 @@
+/* main.css*/
+.body{
+	width: 1774px;
+	margin-left: auto; 
+	margin-right: auto;
+}
+.aside-title{
+	position:relative;
+	display:inline-grid;
+	top:33px;
+	margin-right: 63px;
+}
+.title-content1{
+	margin-bottom: 17px;
+}
+.main{
+	display:inline-grid;
+	position: absolute;
+	width:1366px;
+}
+.main-center-content{
+	width: 1366px;
+	height: 768px;
+}
+.right-header{
+    float: right;
+	text-align: right;
+	position: fixed;
+	width: 80%;
+	z-index: 2000;
+}
+.right-menu{
+	list-style: none;
+	text-decoration: underline;
+	
+}
+/* @media screen and (max-width: 1500px) { */
+/*     .right-menu { */
+/* 		right: 20%; */
+/*     } */
+/* } */
+/* @media screen and (max-width: 1000px) { */
+/*     .right-menu { */
+/* 		right: 40%; */
+/*     } */
+/* } */
+/* @media screen and (max-width: 500px) { */
+/*     .right-menu { */
+/* 		right: 60%; */
+/*     } */
+/* } */
+
+.right-menu li{
+    margin-bottom: 14px;
+}
+.video-content{
+	position:absolute;
+	width: inherit;
+ 	margin-top: 0px;
+}
+.header-section {
+	position: absolute;
+	width: 100%;
+	top:0%;
+}
+.header-video{
+	position: absolute;
+	width: 1366px;
+}
+.header-container{
+	position: relative;
+	top: 325px;
+	width: 1366px;
+	text-align: center;
+}
+.text-main-title{
+	display: inline-block;
+}
+.text-content{
+	padding-top: 94px;
+}
+.text-center1{
+	float: left;
+	width: 25%;
+}
+.text-center2{
+	float: left;
+	text-align: center;
+	width: 50%;
+}
+.text-center3{
+	float: left;
+	width: 25%;
+}
+.right-date{
+	float: right;
+}
+.small-span{
+	font-size: 16pt;
+}
+.text-content2{
+	padding-top:200px;
+	height: 500px;
+}
+.round-about-img{
+	float: left;
+	width:50%;
+}
+.round-about-text{
+	float: left;
+	width:50%;
+}
+.univer-text{
+	font-size: 16pt;
+}
+.Professor-text{
+	margin-top :78px;
+	font-size: 16pt;
+}
+.round-about-title{
+	margin-top: 84px;
+    margin-bottom: 38px;
+	width: 100%;
+	font-size: 16pt;
+	text-align: center;
+    padding-left: 9%;
+}
+.text-content3{
+	display: inline-block;
+}
+.round-about-poster{
+	float: left;
+	width: 50%;
+}
+.round-about-poster-text{
+	float: left;
+	width: 50%;
+}
+.round-about-png1{
+	height: 617px;
+	padding-right:10%;
+	float: right;
+	width: 90%;
+}
+.round-about-png2{
+	height: 617px;
+	padding-right:10%;
+	float: right;
+}
+.poster-text{
+	font-size: 16pt;
+}
