@@ -8,7 +8,7 @@ var workArr = ["illurstrator1", "illurstrator2", "illurstrator3", "editorial1", 
 var classNumArr = {"illurstrator": 0, "editorial": 3, "brand": 6, "ux":9};
 
 window.onload = function() {
-	intervalPlay01(1, person_end_num, 'person');
+//	intervalPlay01(1, person_end_num, 'person');
 	intervalPlay02(0);
 
 	var se = document.getElementsByClassName('slideEvent');
@@ -22,17 +22,30 @@ window.onload = function() {
 				
 				//각 사진의 갯수를 여기서 넣어줬다.
 				var end = person_end_num;
-				stop_interval01(idx, end , param_id);
+				mouse_over(idx, "person");
+			},
+			se[idx].onmouseout = function() {
+				var idx2 = this.id.replace(/[a-z]/gi, "");
+				var param_id = this.id.replace(/[0-9]/g,"");
+				
+				//각 사진의 갯수를 여기서 넣어줬다.
+				var end = person_end_num;
+				mouse_out(idx2, end , param_id);
 			}
 		})();
 	}
-	
 	
 	var se2 = document.getElementsByClassName('slideEvent2');
 	for(var j= 0; j < se2.length; j++) {
 		var  idx2 = j;
 		(function() {
 			se2[idx2].onmouseover = function() {
+				var number = classNumArr[this.id];
+//				stop_interval02(number);
+				
+				port_mouse_over(number);
+			}
+			, se2[idx2].onmouseout = function() {
 				var number = classNumArr[this.id];
 				stop_interval02(number);
 			}
@@ -144,7 +157,6 @@ function animate_image(param_id, div_id, color){
 		nodes[i].style.color = "black";
 	}
 	
-
 	document.getElementById(param_id).style.color = color;
 	var img_src = '../img/' + param_id + '.jpg';
 	var img_div = document.getElementById(div_id);
@@ -182,6 +194,53 @@ function intervalPlay01(start_num, end_num, img_type) {
 	
 }
 /**
+ * 작성일 : 2017.08.24
+ * 함수명 : mouse_over
+ * 작성자 : 송하람
+ * 설명 : mouseover시 호출되는 함수
+ *
+ */
+function mouse_over(id_num, param_id){
+	clearInterval(personTimerId); 
+	var i = id_num;
+	var div_id = "person_img";
+	var img_id = "person" + (i++) + "";
+	
+	//사진 돌아가면서
+	animate_image(img_id, div_id, '#ff3333');
+}
+/**
+ * 작성일 : 2017.08.24
+ * 함수명 : intervalPlay01
+ * 작성자 : 송하람
+ * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다. - 사람
+ *
+ */
+function mouse_out(id_num, end_num, param_id){
+	var i = id_num*1+1;
+	var div_id = "person_img";
+	var img_id = param_id + (i++) + "";
+	
+	//사진 돌아가면서
+	animate_image(img_id, div_id, '#ff3333');
+	
+	personTimerId = setInterval(function() {
+      //반복할 실행문
+	  if (i == end_num) {
+		  img_id  = param_id + (i);
+		  i = 1;
+	  }
+	  else {
+		  img_id  = param_id + (i++);
+	  }
+	  
+	  animate_image(img_id, div_id, '#ff3333');
+		  
+	}, 1800);
+}
+
+
+/**
  * 작성일 : 2017.08.25
  * 함수명 : intervalPlay02
  * 작성자 : 송하람
@@ -212,6 +271,31 @@ function intervalPlay02(start_num) {
 		animate_image(img_id, div_id, '#0099ff');
 		  
 	}, 1800);
+	
+}
+/**
+ * 작성일 : 2017.08.25
+ * 함수명 : port_mouse_over
+ * 작성자 : 송하람
+ * 설명 : 마우스오버시 동작 - 작품
+ */
+function port_mouse_over(start_num){
+	var i = start_num;
+	var div_id = "port_img";
+	var img_id = workArr[i++] + "";
+	var end_num = workArr.length;
+	
+	//사진 돌아가면서
+	animate_image(img_id, div_id, '#0099ff');
+	play_work(img_id);
+}
+/**
+ * 작성일 : 2017.08.25
+ * 함수명 : port_mouse_out
+ * 작성자 : 송하람
+ * 설명 : 마우스뗄때 동작 - 작품
+ */
+function port_mouse_out(){
 	
 }
 /**

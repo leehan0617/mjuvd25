@@ -63,6 +63,7 @@ li{
 	font-weight:bold; 
 	margin-top:117px; 
 	margin-left:10.6%;
+	margin-top:117px;
 }
 .portfolio_div{
 	font-size:60pt; 
@@ -103,4 +104,31 @@ li{
 	height: 100%;  
 	display:inline-block; 
 	float:left; 
+}
+.graduates_div2{
+	margin-left:10.6%; 
+	margin-top:91px;
+	height:825px;
+}
+.person_ul{
+	list-style:none;
+	 padding:0; 
+	 margin:0px; 
+	 display:inline-block;
+	 float:left;
+}
+.person_ul2{
+	list-style:none; 
+	padding:0; 
+	margin-top:0px; 
+	margin-left:13%; 
+	display:inline-block; 
+	float:left;
+}
+.person_img{
+	width:18.9%; 
+	margin-left:8%; 
+	height:556px; 
+	display:inline-block; 
+	background-color:gray;
 }
