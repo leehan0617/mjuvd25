@@ -25,31 +25,16 @@
 .right-header{
     float: right;
 	text-align: right;
-	position: fixed;
-	width: 80%;
+	position: relative;
 	z-index: 2000;
+	margin-right: 13.7%;
+	margin-top:33px; 
 }
 .right-menu{
 	list-style: none;
 	text-decoration: underline;
 	
 }
-/* @media screen and (max-width: 1500px) { */
-/*     .right-menu { */
-/* 		right: 20%; */
-/*     } */
-/* } */
-/* @media screen and (max-width: 1000px) { */
-/*     .right-menu { */
-/* 		right: 40%; */
-/*     } */
-/* } */
-/* @media screen and (max-width: 500px) { */
-/*     .right-menu { */
-/* 		right: 60%; */
-/*     } */
-/* } */
-
 .right-menu li{
     margin-bottom: 14px;
 }
