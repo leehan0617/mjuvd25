@@ -6,7 +6,7 @@
 }
 .aside-title{
 	position:relative;
-	display:inline-grid;
+	display:inline-block;
 	top:33px;
 	margin-right: 63px;
 }
@@ -14,7 +14,7 @@
 	margin-bottom: 17px;
 }
 .main{
-	display:inline-grid;
+	display:inline-block;
 	position: absolute;
 	width:1366px;
 }
