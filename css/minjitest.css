@@ -124,23 +124,29 @@
 }
 .univer-text{
 	font-size: 16pt;
-	line-height:1.5em;
+	line-height:24pt;
 	font-family:'Noto Sans Medium';
+	font-weight: 500;
 }
 .Professor-text{
 	font-family:'Noto Sans Regular';
+	font-weight: 400;
 	margin-top :78px;
 	font-size: 16pt;
+	line-height:27pt;
 }
 .round-about-title{
+	margin-top: 10px;
     margin-bottom: 44px;
     font-family:'Noto Sans Bold';
-    font-size: 16pt;
+    font-weight: 700;
+    font-size: 12pt;
 }
 .text-content{
 	margin-top: 155px;
 	padding-bottom: 217px;
 	display: inline-block;
+	width: 100%;
 }
 .round-about-poster{
 	float: left;
@@ -149,6 +155,8 @@
 .round-about-poster-text{
 	float: left;
 	width: 50%;
+	height: 650px;
+	position: relative;
 }
 .round-about-png2{
 	height: 650px;
@@ -158,11 +166,13 @@
 }
 .poster-text{
 	font-family:'Noto Sans Regular';
-	font-size: 16pt;
-	line-height:1.5em;
-	width: 35%;
+	font-size: 12pt;
+	line-height:27px;
+	font-weight: 400;
 }
 .tree_div{
 	padding-left: 64.5%;
 	padding-bottom: 76px;
+	position: absolute;
+	bottom: 0;
 }
