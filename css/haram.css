@@ -57,15 +57,14 @@ li{
 .graduates_div{
 	font-size:60pt; 
 	font-weight:bold; 
-	margin-top:117px; 
-	margin-left:10.6%;
+	margin-left:25%;
 	margin-top:117px;
 }
 .portfolio_div{
 	font-size:60pt; 
 	font-weight:bold; 
 	margin-top:252px; 
-	margin-left:10.6%;
+	margin-left:25%;
 }
 .tel_div{
 	position:relative;
@@ -77,7 +76,7 @@ li{
 }
 .portfolio_img_div{
 	float:left; 
-	margin-left:10.6%;
+	margin-left:25%;
 	 width:25.78%; 
 	 background-color:gray; 
 	 display:inline-block; 
@@ -102,7 +101,7 @@ li{
 	float:left; 
 }
 .graduates_div2{
-	margin-left:10.6%; 
+	margin-left:25%; 
 	margin-top:91px;
 	height:825px;
 }
