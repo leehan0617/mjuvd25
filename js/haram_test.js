@@ -190,7 +190,7 @@ function intervalPlay01(start_num, end_num, img_type) {
 	  
 	  animate_image(img_id, div_id, '#ff3333');
 		  
-	}, 1800);
+	}, 5000);
 	
 }
 /**
