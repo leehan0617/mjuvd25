@@ -6,14 +6,17 @@
 	letter-spacing:0.1em; 
 }
 .font01{
+	font-family: 'Noto Sans Black';
 	font-size:18pt;
 	line-height:0.027em;
 }
 .font02{
-	font-size:16pt;
+	font-family: 'Noto Sans Bold';
+	font-size:18pt;
 	line-height:0.027em;
 }
 .font03{
+	font-family: 'Noto Sans Medium';
 	font-size:16pt;
 	line-height:0.03em;
 }
