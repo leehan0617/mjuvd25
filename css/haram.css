@@ -35,6 +35,17 @@
 	font-size:22pt;
 	text-decoration:underline;
 }
+
+.footer_font1 {
+	font-family: 'Noto Sans Regular';
+	font-size : 14pt;
+}
+
+.footer_font2 {
+	font-family: 'Noto Sans Regular';
+	font-size : 14pt;
+	line-height : 24pt;
+}
 li{
 	position:relative;
 }
