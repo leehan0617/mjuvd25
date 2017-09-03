@@ -7,44 +7,44 @@
 }
 .font01{
 	font-family: 'Noto Sans Black';
-	font-size:18pt;
+	font-size:18px;
 	line-height:0.027em;
 }
 .font02{
 	font-family: 'Noto Sans Bold';
-	font-size:17pt;
+	font-size:17px;
 	line-height:0.027em;
 }
 .font03{
 	font-family: 'Noto Sans Medium';
-	font-size:14pt;
+	font-size:14px;
 	line-height:0.03em;
 }
 .font04{
-	font-size:14pt;
+	font-size:14px;
 }
 .font05{
-	font-size:14pt;
+	font-size:14px;
 	text-decoration:underline;
 }
 .font06{
-	font-size:14pt;
+	font-size:14px;
 	line-height:0.024em;
 }
 .font07{
-	font-size:17pt;
+	font-size:17px;
 	text-decoration:underline;
 }
 
 .footer_font1 {
 	font-family: 'Noto Sans Regular';
-	font-size : 14pt;
+	font-size : 14px;
 }
 
 .footer_font2 {
 	font-family: 'Noto Sans Regular';
-	font-size : 14pt;
-	line-height : 24pt;
+	font-size : 14px;
+	line-height : 24px;
 }
 li{
 	position:relative;
@@ -63,26 +63,26 @@ li{
 	margin-bottom:15px;
 }
 .direction_div{
-	font-size:60pt; 
+	font-size:60px;
 	font-weight:bold; 
 	margin-top:350px; 
 	text-align:center
 }
 .graduates_div{
-	font-size:60pt; 
+	font-size:60px;
 	font-weight:bold; 
 	margin-left:25%;
 	margin-top:133px;
 }
 .portfolio_div{
-	font-size:60pt; 
+	font-size:60px;
 	font-weight:bold; 
 	margin-top:350px; 
 	margin-left:25%;
 }
 .tel_div{
 	position:relative;
-	font-size:50pt;
+	font-size:50px;
 	font-weight:bold; 
 	margin-top:97px; 
 	text-align:center; 

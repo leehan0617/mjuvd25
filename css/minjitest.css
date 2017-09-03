@@ -123,8 +123,8 @@
 	width:50%;
 }
 .univer-text{
-	font-size: 12pt;
-	line-height:20pt;
+	font-size: 12px;
+	line-height:20px;
 	font-family:'Noto Sans Medium';
 	font-weight: 500;
 }
@@ -132,15 +132,15 @@
 	font-family:'Noto Sans Regular';
 	font-weight: 400;
 	margin-top :78px;
-	font-size: 12pt;
-	line-height:20pt;
+	font-size: 12px;
+	line-height:20px;
 }
 .round-about-title{
 	margin-top: 17px;
     margin-bottom: 44px;
     font-family:'Noto Sans Black';
     font-weight: 700;
-    font-size: 12pt;
+    font-size: 12px;
 }
 .text-content{
 	margin-top: 155px;
@@ -166,7 +166,7 @@
 }
 .poster-text{
 	font-family:'Noto Sans Regular';
-	font-size: 12pt;
+	font-size: 12px;
 	line-height:27px;
 	font-weight: 400;
 }
