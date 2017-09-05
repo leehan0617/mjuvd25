@@ -5,11 +5,10 @@ var portfolioTimerId;
 var person_end_num = 29;
 
 var workArr = ["illurstrator1", "illurstrator2", "illurstrator3", "editorial1", "editorial2", "editorial3", "brand1", "brand2", "brand3", "ux1", "ux2", "ux3"];
-var classNumArr = {"illurstrator": 0, "editorial": 3, "brand": 6, "ux":9};
 
 window.onload = function() {
-//	intervalPlay01(1, person_end_num, 'person');
-	intervalPlay02(0);
+	intervalPlay01(1, person_end_num, 'person');
+//	intervalPlay02(0);
 
 	var se = document.getElementsByClassName('slideEvent');
 	
@@ -35,19 +34,15 @@ window.onload = function() {
 		})();
 	}
 	
+	//과목이름에 마우스 갖다대기
 	var se2 = document.getElementsByClassName('slideEvent2');
 	for(var j= 0; j < se2.length; j++) {
 		var  idx2 = j;
 		(function() {
-			se2[idx2].onmouseover = function() {
-				var number = classNumArr[this.id];
-//				stop_interval02(number);
-				
-				port_mouse_over(number);
-			}
-			, se2[idx2].onmouseout = function() {
-				var number = classNumArr[this.id];
-				stop_interval02(number);
+			se2[idx2].onclick = function() {
+				var port_src = document.getElementById("port_img");
+				port_src.src = "img/main_portfolio/" + this.id + "_preview.png"
+				play_work(this.id);
 			}
 		})();
 	}
@@ -58,13 +53,15 @@ window.onload = function() {
 		var stop_num;
 		(function() {
 			se3[idx3].onmouseover = function() {
-				for(var z = 0; z < workArr.length; z++) {
-					if (this.id == workArr[z]) {
-						stop_num = z;
-						break;
-					}
-				}
-				stop_interval02(stop_num);
+				var port_src = document.getElementById("port_img");
+				port_src.src = "img/main_portfolio/" + this.id + ".png"
+//				for(var z = 0; z < workArr.length; z++) {
+//					if (this.id == workArr[z]) {
+//						stop_num = z;
+//						break;
+//					}
+//				}
+//				port_mouse_over(stop_num);
 			}
 		})();
 	}
@@ -158,7 +155,7 @@ function animate_image(param_id, div_id, color){
 	}
 	
 	document.getElementById(param_id).style.color = color;
-	var img_src = '../img/' + param_id + '.jpg';
+	var img_src = 'img/person/' + param_id + '.png';
 	var img_div = document.getElementById(div_id);
 	
 	img_div.src = img_src;
@@ -190,7 +187,7 @@ function intervalPlay01(start_num, end_num, img_type) {
 	  
 	  animate_image(img_id, div_id, '#ff3333');
 		  
-	}, 5000);
+	}, 1800);
 	
 }
 /**
@@ -256,21 +253,21 @@ function intervalPlay02(start_num) {
 	animate_image(img_id, div_id, '#0099ff');
 	play_work(img_id);
 	
-	portfolioTimerId = setInterval(function() {
-	  //반복할 실행문
-		  if (i == (end_num-1)) {
-			  img_id  = workArr[i];
-			  i = 0;
-		  }
-		  else {
-			  img_id  = workArr[i++];
-		  }
-	  
-		
-		play_work(img_id);
-		animate_image(img_id, div_id, '#0099ff');
-		  
-	}, 1800);
+//	portfolioTimerId = setInterval(function() {
+//	  //반복할 실행문
+//		  if (i == (end_num-1)) {
+//			  img_id  = workArr[i];
+//			  i = 0;
+//		  }
+//		  else {
+//			  img_id  = workArr[i++];
+//		  }
+//	  
+//		
+//		play_work(img_id);
+//		animate_image(img_id, div_id, '#0099ff');
+//		  
+//	}, 1800);
 	
 }
 /**
@@ -287,17 +284,8 @@ function port_mouse_over(start_num){
 	
 	//사진 돌아가면서
 	animate_image(img_id, div_id, '#0099ff');
-	play_work(img_id);
 }
-/**
- * 작성일 : 2017.08.25
- * 함수명 : port_mouse_out
- * 작성자 : 송하람
- * 설명 : 마우스뗄때 동작 - 작품
- */
-function port_mouse_out(){
-	
-}
+
 /**
  * 작성일 : 2017.08.25
  * 함수명 : play_work
@@ -311,7 +299,7 @@ function play_work(img_id) {
 		 nodes[j].style.color = "black";
 	}
 	
-	var list_nodes = document.querySelectorAll("#port_list ul");
+	var list_nodes = document.querySelectorAll("#port_list div");
 	for(var j = 0; j < list_nodes.length; j++) {
 		list_nodes[j].style.display = "none";
 	}
@@ -320,7 +308,7 @@ function play_work(img_id) {
 	var list = document.getElementById(list_id);
 	list.style.display="block";
 	
-	document.getElementById(img_id2).style.color = '#0099ff';
+	document.getElementById(img_id2).style.color = '#ff3333';
 }
 
 /**
