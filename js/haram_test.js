@@ -62,6 +62,18 @@ window.onload = function() {
 //					}
 //				}
 //				port_mouse_over(stop_num);
+			}, 
+			se3[idx3].onmouseout = function() {
+				var file_id = this.id.replace(/[0-9]/g,"");
+				var port_src = document.getElementById("port_img");
+				port_src.src = "img/main_portfolio/" + file_id + "_preview.png"
+//				for(var z = 0; z < workArr.length; z++) {
+//					if (this.id == workArr[z]) {
+//						stop_num = z;
+//						break;
+//					}
+//				}
+//				port_mouse_over(stop_num);
 			}
 		})();
 	}

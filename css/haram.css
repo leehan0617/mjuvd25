@@ -10,11 +10,11 @@
 	line-height:0.027em;
 }
 .font02{
-	font-size:16px;
+	font-size:17px;
 	line-height:0.027em;
 }
 .font03{
-	font-size:13px;
+	font-size:14px;
 	line-height:0.03em;
 }
 .font04{
@@ -47,32 +47,34 @@ li{
 }
 .list_li{
 	margin-bottom:17px;
+	text-align:left;
 }
 .direction_div{
 	font-size:60px; 
-	font-weight:bold; 
 	margin-top:199px; 
-	text-align:center
+	text-align:center;
+
+}
+.img_bottom{
+	height: auto;
+	max-width: 100%;
+	width:auto;
 }
 .graduates_div{
 	font-size:60px; 
 	font-weight:bold; 
 	margin-top:117px; 
-	margin-left:10.6%;
-	margin-top:117px;
 }
 .portfolio_div{
 	font-size:60px; 
 	font-weight:bold; 
 	margin-top:252px; 
-	margin-left:10.6%;
 }
 .tel_div{
 	position:relative;
 	font-size:50px;
 	font-weight:bold; 
 	margin-top:189px; 
-	text-align:center; 
 	margin-bottom:230px;
 }
 .portfolio_img_div{
