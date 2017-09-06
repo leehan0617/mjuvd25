@@ -75,23 +75,13 @@ html , body {
 }
 .main2{
 	position: absolute;
-	width: 100%;
-	max-width:1366px;
-	margin-left: auto; 
-	margin-right: auto;
 }
-/* .main-center-content{ */
-/* 	height: 968px; */
-/* 	padding-bottom: 15px; */
-/* } */
 .right-header{
     float: right;
 	text-align: right;
-	position: relative;
-	width: 11%;
+	position: fixed;
 	z-index: 2000;
 	display: inline-block;
-/* 	margin-right: 13.7%; */
 	margin-top:33px; 
 }
 .right-menu{
@@ -101,42 +91,42 @@ html , body {
 .right-menu li{
     margin-bottom: 9px;
 }
-.video-content{
-	position:absolute;
-}
 .header-video{
 	max-width: 100%;
     width: auto;
     height: auto;
 }
-.header-container{
+.video{
+	margin-bottom: 15px;
 }
 .text-main-title{
 	position: absolute;
 	width: 100%;
     max-width: 1366px;
-    height: 100%;
     top: 50%;
+    height: 100%;
+    max-height: 768px;
 }
 .text-main-title img{
 	max-width: 100%;
     width: auto;
     height: auto;
-		
 }
 .round-about-img{
 	padding-top:145px;
 	float: left;
 	height: 489px;
 	width:50%;
+	height: auto;
 }
 .title_illustrate{
-	float: right;
-	padding-right: 20%;
+	max-width: 100%;
+    width: auto;
+    height: auto;
 }
 .round-about-text{
 	padding-top:151px;
-	margin-left: 25%;
+	float: left;
 	width:50%;
 }
 .univer-text{
@@ -144,6 +134,7 @@ html , body {
 	line-height:20px;
 	font-family:'Noto Sans Medium';
 	font-weight: 500;
+	text-align: left;
 }
 .Professor-text{
 	font-family:'Noto Sans Regular';
@@ -151,6 +142,7 @@ html , body {
 	margin-top :78px;
 	font-size: 12px;
 	line-height:20px;
+	text-align: left;
 }
 .round-about-title{
 	margin-top: 17px;
@@ -158,6 +150,7 @@ html , body {
     font-family:'Noto Sans Black';
     font-weight: 700;
     font-size: 12px;
+    text-align: left;
 }
 .text-content{
 	margin-top: 155px;
@@ -172,24 +165,24 @@ html , body {
 .round-about-poster-text{
 	float: left;
 	width: 50%;
-	height: 650px;
-	position: relative;
+	height: auto;
 }
 .round-about-png2{
-	height: 650px;
 	padding-right:6.3%;
 	float: right;
-	max-width: 469px;
+	max-width: 100%;
+    width: auto;
+    height: auto;
 }
 .poster-text{
 	font-family:'Noto Sans Regular';
 	font-size: 12px;
 	line-height:27px;
 	font-weight: 400;
+	text-align: left;
 }
 .tree_div{
 	padding-left: 64.5%;
 	padding-bottom: 76px;
-	position: absolute;
 	bottom: 0;
 }
