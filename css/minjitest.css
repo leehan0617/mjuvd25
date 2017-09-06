@@ -98,6 +98,7 @@ html , body {
 }
 .video{
 	margin-bottom: 15px;
+    position: relative;
 }
 .text-main-title{
 	position: absolute;
