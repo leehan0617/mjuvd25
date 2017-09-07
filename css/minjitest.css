@@ -76,13 +76,20 @@ html , body {
 .main2{
 	position: absolute;
 }
+.headerDiv{
+	position: relative;
+	width: 28%;
+	float: left;
+	height: 100%;
+}
 .right-header{
-    float: right;
-	text-align: right;
-	position: fixed;
-	z-index: 2000;
-	display: inline-block;
+    right: 0;
+    text-align: right;
+    position: absolute;
+    z-index: 2000;
+    display: inline-block;
 	margin-top:33px; 
+	padding-right: 9%; 
 }
 .right-menu{
 	list-style: none;
