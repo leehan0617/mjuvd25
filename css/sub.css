@@ -19,7 +19,7 @@ html , body {
 }
 
 #nav{
-    padding-right:1%;
+    padding-right:2%;
     margin-top : 153px;
 }
 
@@ -55,7 +55,7 @@ html , body {
 
 #work {
     /*background: cadetblue;*/
-    width : 68.5%;
+    width : 67.5%;
     max-width:950px;
 }
 
@@ -63,7 +63,14 @@ html , body {
     width : 100%;
 }
 
-@media screen and (min-width : 1654px) {
+#fix {
+    display: inline-block;
+    position : fixed;
+    width: 1%;
+    vertical-align: middle;
+}
+
+@media screen and (min-width : 1725px) {
     #work_detail {
         margin-left : 7%;
         display: inline-block;
@@ -71,7 +78,7 @@ html , body {
     }
 }
 
-@media screen and (max-width : 1653px) {
+@media screen and (max-width : 1724px) {
     #work_detail {
         display: inline-block;
         vertical-align: top;
@@ -190,10 +197,6 @@ html , body {
     }
 }
 
-
-
-
-
 .member div .member_left p {
     margin-top : 9px;
 }
@@ -205,4 +208,12 @@ html , body {
 .arrow {
     margin-left : 25px;
     padding-bottom : 3px;
+}
+
+.member_left p , .member_right p , nav ul li , .project_category , .ct_subject{
+    cursor : pointer;
+}
+
+.ct_subject:hover {
+    color : #ff3333;
 }
