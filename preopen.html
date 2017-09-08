@@ -26,7 +26,7 @@
 </head>
 <body>
 	<div id="mobile">
-		<video poster="pre_mobile.png">
+		<video id="mobile_video" poster="pre_mobile.png">
 			<source src="preopen_mobile.mp4"></source>
 		</video>
 	</div>
@@ -46,6 +46,11 @@
 			$('#mobile').hide();
 		}
 	}
+
+	var video = document.getElementById('mobile_video');
+	video.addEventListener('click' , function(){
+		this.play();
+	})
 	</script>
 </body>
 </html>
