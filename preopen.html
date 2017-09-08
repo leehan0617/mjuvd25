@@ -25,19 +25,13 @@
 	
 </head>
 <body>
-	<!--
-	<div id="video">
-		<video src="moving_poster.mp4" autoplay loop></video>
-	</div>
-	-->
-	<!--
-	<div>
-		<img src="preopen.gif" style="width:100%;"/>
-	</div>
-	-->
 	<div id="mobile">
+		<video poster="pre_mobile.png">
+			<source src="preopen_mobile.mp4"></source>
+		</video>
 	</div>
 	<div id="web">
+		<img src="preopen_web.gif" style="width:100%"/>
 	</div>
 
 	<script type="text/javascript">
@@ -45,12 +39,11 @@
  
 	if(navigator.platform){
 		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
-			// var html = '<img src="pre_mobile.png" style="width:100%;"/>';
-			var html = '<video src="preopen_mobile.mp4" autoplay muted></video>';
-			$('#mobile').append(html);
+			$('#mobile').show();
+			$('#web').hide();
 		}else{
-			var html = '<img src="preopen_web.gif" style="width:100%"/>';
-			$('#web').append(html);
+			$('#web').show();
+			$('#mobile').hide();
 		}
 	}
 	</script>
