@@ -8,6 +8,10 @@ html , body {
     width: auto;
     height: auto;
 }
+.right-menu a{
+	cursor:pointer; 
+}
+
 .body{
 	text-align: center;
 	width: 100%;
