@@ -167,6 +167,11 @@ function mouse_over(id_num, param_id){
  *
  */
 function mouse_out(id_num, end_num, param_id){
+	
+	if (id_num == end_num) {
+		id_num = 0;
+	}
+	
 	var i = id_num*1+1;
 	var div_id = "person_img";
 	var img_id = param_id + (i++) + "";
