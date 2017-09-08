@@ -4,11 +4,8 @@ var portfolioTimerId;
 
 var person_end_num = 29;
 
-var workArr = ["illurstrator1", "illurstrator2", "illurstrator3", "editorial1", "editorial2", "editorial3", "brand1", "brand2", "brand3", "ux1", "ux2", "ux3"];
-
 window.onload = function() {
 	intervalPlay01(1, person_end_num, 'person');
-//	intervalPlay02(0);
 
 	var se = document.getElementsByClassName('slideEvent');
 	
@@ -19,7 +16,6 @@ window.onload = function() {
 				var idx = this.id.replace(/[a-z]/gi, "");
 				var param_id = this.id.replace(/[0-9]/g,"");
 				
-				//각 사진의 갯수를 여기서 넣어줬다.
 				var end = person_end_num;
 				mouse_over(idx, "person");
 			},
@@ -27,7 +23,6 @@ window.onload = function() {
 				var idx2 = this.id.replace(/[a-z]/gi, "");
 				var param_id = this.id.replace(/[0-9]/g,"");
 				
-				//각 사진의 갯수를 여기서 넣어줬다.
 				var end = person_end_num;
 				mouse_out(idx2, end , param_id);
 			}
@@ -55,25 +50,11 @@ window.onload = function() {
 			se3[idx3].onmouseover = function() {
 				var port_src = document.getElementById("port_img");
 				port_src.src = "img/main_portfolio/" + this.id + ".png"
-//				for(var z = 0; z < workArr.length; z++) {
-//					if (this.id == workArr[z]) {
-//						stop_num = z;
-//						break;
-//					}
-//				}
-//				port_mouse_over(stop_num);
 			}, 
 			se3[idx3].onmouseout = function() {
 				var file_id = this.id.replace(/[0-9]/g,"");
 				var port_src = document.getElementById("port_img");
 				port_src.src = "img/main_portfolio/" + file_id + "_preview.png"
-//				for(var z = 0; z < workArr.length; z++) {
-//					if (this.id == workArr[z]) {
-//						stop_num = z;
-//						break;
-//					}
-//				}
-//				port_mouse_over(stop_num);
 			}
 		})();
 	}
@@ -84,26 +65,24 @@ google.maps.event.addDomListener(window, 'load', initialize);
 /**
  * 작성일 : 2017.08.24
  * 함수명 : initialize
- * 작성자 : 송하람
  * 설명 : 구글맵연동관련 소스
  */
 function initialize() {
-    var mapLocation = new google.maps.LatLng('37.5764834', '127.00144539999997'); // 지도에서 가운데로 위치할 위도와 경도
-    var markLocation = new google.maps.LatLng('37.5764834', '127.00144539999997'); // 마커가 위치할 위도와 경도
+    var mapLocation = new google.maps.LatLng('37.5764834', '127.00144539999997'); 
+    var markLocation = new google.maps.LatLng('37.5764834', '127.00144539999997');
      
     var mapOptions = {
-      center: mapLocation, // 지도에서 가운데로 위치할 위도와 경도(변수)
-      zoom: 18, // 지도 zoom단계
+      center: mapLocation,
+      zoom: 18, 
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       scrollwheel: false
     };
-    var map = new google.maps.Map(document.getElementById("map-canvas"), // id: map-canvas, body에 있는 div태그의 id와 같아야 함
+    var map = new google.maps.Map(document.getElementById("map-canvas"), 
         mapOptions);
      
-    var size_x = 60; // 마커로 사용할 이미지의 가로 크기
-    var size_y = 60; // 마커로 사용할 이미지의 세로 크기
+    var size_x = 60; 
+    var size_y = 60; 
      
-    // 마커로 사용할 이미지 주소
     var image = new google.maps.MarkerImage( 'http://www.larva.re.kr/home/img/boximage3.png',
                         new google.maps.Size(size_x, size_y),
                         '',
@@ -112,9 +91,9 @@ function initialize() {
      
     var marker;
     marker = new google.maps.Marker({
-           position: markLocation, // 마커가 위치할 위도와 경도(변수)
+           position: markLocation, 
            map: map,
-           title: '홍익대 대학로 아트센터' // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+           title: '홍익대 대학로 아트센터' 
     });
  
     google.maps.event.addListener(marker, "click", function() {
@@ -123,7 +102,6 @@ function initialize() {
 }
 
 
-//javascript - fadein,fadeout
 function fadeIn( elem, ms )
 {
   if( ! elem )
@@ -157,7 +135,6 @@ function fadeIn( elem, ms )
 /**
  * 작성일 : 2017.08.24
  * 함수명 : animate_image
- * 작성자 : 송하람
  * 설명 : 이미지가 나타나는 함수
  */
 function animate_image(param_id, div_id, color){
@@ -176,7 +153,6 @@ function animate_image(param_id, div_id, color){
 /**
  * 작성일 : 2017.08.24
  * 함수명 : intervalPlay01
- * 작성자 : 송하람
  * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다. - 사람
  */
 function intervalPlay01(start_num, end_num, img_type) {
@@ -188,7 +164,6 @@ function intervalPlay01(start_num, end_num, img_type) {
 	animate_image(img_id, div_id, '#ff3333');
 	
 	personTimerId = setInterval(function() {
-      //반복할 실행문
 	  if (i == end_num) {
 		  img_id  = img_type + (i);
 		  i = 1;
@@ -205,7 +180,6 @@ function intervalPlay01(start_num, end_num, img_type) {
 /**
  * 작성일 : 2017.08.24
  * 함수명 : mouse_over
- * 작성자 : 송하람
  * 설명 : mouseover시 호출되는 함수
  *
  */
@@ -215,13 +189,11 @@ function mouse_over(id_num, param_id){
 	var div_id = "person_img";
 	var img_id = "person" + (i++) + "";
 	
-	//사진 돌아가면서
 	animate_image(img_id, div_id, '#ff3333');
 }
 /**
  * 작성일 : 2017.08.24
  * 함수명 : intervalPlay01
- * 작성자 : 송하람
  * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다. - 사람
  *
  */
@@ -230,11 +202,9 @@ function mouse_out(id_num, end_num, param_id){
 	var div_id = "person_img";
 	var img_id = param_id + (i++) + "";
 	
-	//사진 돌아가면서
 	animate_image(img_id, div_id, '#ff3333');
 	
 	personTimerId = setInterval(function() {
-      //반복할 실행문
 	  if (i == end_num) {
 		  img_id  = param_id + (i);
 		  i = 1;
@@ -252,7 +222,6 @@ function mouse_out(id_num, end_num, param_id){
 /**
  * 작성일 : 2017.08.25
  * 함수명 : intervalPlay02
- * 작성자 : 송하람
  * 설명 : 타이머 - 돌아가면서 이미지를 뿌린다. - 작품
  */
 function intervalPlay02(start_num) {
@@ -261,31 +230,13 @@ function intervalPlay02(start_num) {
 	var img_id = workArr[i++] + "";
 	var end_num = workArr.length;
 	
-	//사진 돌아가면서
 	animate_image(img_id, div_id, '#0099ff');
 	play_work(img_id);
-	
-//	portfolioTimerId = setInterval(function() {
-//	  //반복할 실행문
-//		  if (i == (end_num-1)) {
-//			  img_id  = workArr[i];
-//			  i = 0;
-//		  }
-//		  else {
-//			  img_id  = workArr[i++];
-//		  }
-//	  
-//		
-//		play_work(img_id);
-//		animate_image(img_id, div_id, '#0099ff');
-//		  
-//	}, 1800);
 	
 }
 /**
  * 작성일 : 2017.08.25
  * 함수명 : port_mouse_over
- * 작성자 : 송하람
  * 설명 : 마우스오버시 동작 - 작품
  */
 function port_mouse_over(start_num){
@@ -301,7 +252,6 @@ function port_mouse_over(start_num){
 /**
  * 작성일 : 2017.08.25
  * 함수명 : play_work
- * 작성자 : 송하람
  * 설명 : 포트폴리오 이벤트 
  */
 function play_work(img_id) {
@@ -326,7 +276,6 @@ function play_work(img_id) {
 /**
  * 작성일 : 2017.08.24
  * 함수명 : stop_interval01
- * 작성자 : 송하람
  * 설명 :  중지하고 mouse over한 시점부터 다시 시작-사람
  */
 function stop_interval01(id_num, end, param_id){
@@ -337,7 +286,6 @@ function stop_interval01(id_num, end, param_id){
 /**
  * 작성일 : 2017.08.24
  * 함수명 : stop_interval02
- * 작성자 : 송하람
  * 설명 :  중지하고 mouse over한 시점부터 다시 시작-작품
  */
 function stop_interval02 (id_num) {
