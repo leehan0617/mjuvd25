@@ -102,36 +102,6 @@ function initialize() {
 }
 
 
-function fadeIn( elem, ms )
-{
-  if( ! elem )
-    return;
-
-  elem.style.opacity = 0;
-  elem.style.filter = "alpha(opacity=0)";
-  elem.style.display = "inline-block";
-  elem.style.visibility = "visible";
-
-  if( ms )
-  {
-    var opacity = 0;
-    var timer = setInterval( function() {
-      opacity += 50 / ms;
-      if( opacity >= 1 )
-      {
-        clearInterval(timer);
-        opacity = 1;
-      }
-      elem.style.opacity = opacity;
-      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
-    }, 50 );
-  }
-  else
-  {
-    elem.style.opacity = 1;
-    elem.style.filter = "alpha(opacity=1)";
-  }
-}
 /**
  * 작성일 : 2017.08.24
  * 함수명 : animate_image
@@ -148,7 +118,6 @@ function animate_image(param_id, div_id, color){
 	var img_div = document.getElementById(div_id);
 	
 	img_div.src = img_src;
-	fadeIn(img_div, 400);
 }
 /**
  * 작성일 : 2017.08.24
