@@ -45,8 +45,8 @@
  
 	if(navigator.platform){
 		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
-			// alert("Mobile");
-			var html = '<video src="preopen_mobile.mp4" autoplay loop></video>';
+			var html = '<img src="pre_mobile.png" style="width:100%;"/>';
+			//var html = '<video src="preopen_mobile.mp4" autoplay loop></video>';
 			$('#mobile').append(html);
 		}else{
 			// alert("PC");
