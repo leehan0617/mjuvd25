@@ -51,9 +51,8 @@ li{
 }
 .direction_div{
 	font-size:60px; 
-	margin-top:199px; 
+	padding-top:199px; 
 	text-align:center;
-
 }
 .img_bottom{
 	height: auto;
@@ -74,7 +73,7 @@ li{
 	position:relative;
 	font-size:50px;
 	font-weight:bold; 
-	margin-top:189px; 
+	padding-top:246px; 
 	margin-bottom:230px;
 }
 .portfolio_img_div{
