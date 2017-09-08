@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>제25회 명지대학교 시각디자인전공 졸업전시</title>
+	<style>
+		html , body {
+			width : 100%;
+		}
+
+		#web {
+			margin : 0 auto;
+			width : 90%;
+		}
+
+		#mobile {
+			margin : 0 auto;
+			text-align : center;
+			position : relative;
+		}
+	</style>
+	
+</head>
+<body>
+	<!--
+	<div id="video">
+		<video src="moving_poster.mp4" autoplay loop></video>
+	</div>
+	-->
+	<!--
+	<div>
+		<img src="preopen.gif" style="width:100%;"/>
+	</div>
+	-->
+	<div id="mobile">
+	</div>
+	<div id="web">
+	</div>
+
+	<script type="text/javascript">
+	var filter = "win16|win32|win64|mac|macintel";
+ 
+	if(navigator.platform){
+		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+			// alert("Mobile");
+			var html = '<video src="preopen_mobile.mp4" autoplay loop></video>';
+			$('#mobile').append(html);
+		}else{
+			// alert("PC");
+			var html = '<img src="preopen_web.gif" style="width:100%"/>';
+			$('#web').append(html);
+		}
+	}
+	</script>
+</body>
+</html>
