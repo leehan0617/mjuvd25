@@ -55,11 +55,11 @@ body{
 	if(navigator.platform){
 		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
 			// alert("Mobile");
-			var html = '<video src="moving_poster.mp4" autoplay loop></video>';
+			var html = '<video src="preopen_mobile.mp4" autoplay loop></video>';
 			$('#video').append(html);
 		}else{
 			// alert("PC");
-			var html = '<img src="preopen.gif" style="width:100%"/>';
+			var html = '<img src="preopen_web.gif" style="width:100%"/>';
 			$('#container').append(html);
 		}
 	}
