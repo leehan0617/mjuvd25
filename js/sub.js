@@ -20,4 +20,8 @@ $(function() {
 
 		memberFlag = !memberFlag;
 	});
+
+	$('.vimeo_link').on('click' , function() {
+		location.href = "http://www.naver.com";
+	})
 })
