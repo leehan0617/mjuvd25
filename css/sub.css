@@ -221,6 +221,10 @@ html , body {
     cursor:  pointer;
 }
 
+#member_arrow {
+    margin-left : 17px;
+}
+
 .member_left p , .member_right p , nav ul li , .project_category , .ct_subject{
     cursor : pointer;
 }
