@@ -5,7 +5,7 @@ html , body {
 
 #wrap {
     width : 72%;
-    margin : 136px auto 0 auto;
+    margin : 103px auto 0 auto;
    /* background : red; */
     max-width: 1366px;
 }
@@ -15,12 +15,14 @@ html , body {
 }
 
 #category .ct_text {
-    margin-right : 17px;
+    font-weight:bold;
+    font-size : 14px;
+    margin-right : 5px;
 }
 
 #nav{
     padding-right:2%;
-    margin-top : 153px;
+    margin-top : 125px;
 }
 
 #nav ul li {
@@ -33,12 +35,11 @@ html , body {
 
 #nav ul li {
     display :inline;
-    border-bottom : 1px solid black;
-    padding-bottom:2px;
+    text-decoration: underline;
 }
 
 #main {
-    margin-top : 20px;
+    margin-top : 7px;
 }
 
 #description , #work {
@@ -68,6 +69,7 @@ html , body {
     position : fixed;
     width: 1%;
     vertical-align: middle;
+    margin-top:20%;
 }
 
 @media screen and (min-width : 1725px) {
@@ -88,18 +90,21 @@ html , body {
 .work_name {
     font-family : 'Noto Sans Regular';
     font-size : 14px;
+    font-weight: 600;
+    padding-top:5px;
 }
 
 .work_english_name {
     margin-top : 10px;
     font-family: 'Noto Sans Regular';
     font-size : 20px;
+    font-weight:600;
 }
 
 .work_phone  {
     margin-top : 15px;
     font-family: 'Noto Sans Regular';
-    font-size : 12px;
+    font-size : 14px;
     line-height: 18px;
 }
 
@@ -109,6 +114,9 @@ html , body {
     line-height : 18px;
 }
 
+#description {
+    margin-top : -9px;
+}
 #description .title {
     font-family : 'Noto Sans Bold';
     font-size : 22px;
@@ -124,8 +132,8 @@ html , body {
 #description .contents {
     margin-top : 49px;
     font-family : 'Noto Sans Regular';
-    font-size : 16px;
-    line-height: 30px;
+    font-size : 15px;
+    line-height: 28px;
 }
 
 #main #worker {
@@ -133,18 +141,19 @@ html , body {
 }
 
 #main .project {
-    margin-top : 38px;
+    margin-top : 50px;
 }
 
 #main .project_title {
     font-family: 'Noto Sans Regular';
     font-size : 16px;
+    font-weight: 700;
 }
 
 #main .project_category {
     font-family : 'Noto Sans DemiLight';
     font-size : 14px;
-    margin-top : 12px;
+    margin-top : 11px;
 }
 
 #main .member {
@@ -152,7 +161,7 @@ html , body {
 }
 
 .member .member_div {
-    margin-top : 31px;
+    margin-top : 18px;
 }
 
 .member .member_element {
@@ -162,6 +171,7 @@ html , body {
 #main .project_member {
     font-family : 'Noto Sans Regular';
     font-size : 16px;
+    font-weight: 700;
 }
 
 .member .member_div p {
@@ -198,16 +208,17 @@ html , body {
 }
 
 .member div .member_left p {
-    margin-top : 9px;
+    margin-top : 11px;
 }
 
 .member_div .member_right p {
-    margin-top : 9px;
+    margin-top :11px;
 }
 
 .arrow {
-    margin-left : 25px;
+    margin-left : 13px;
     padding-bottom : 3px;
+    cursor:  pointer;
 }
 
 .member_left p , .member_right p , nav ul li , .project_category , .ct_subject{
