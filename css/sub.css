@@ -73,7 +73,7 @@ html , body {
 }
 
 @media screen and (min-width : 1725px) {
-    #work_detail {
+    #work_detail , #work_detail2{
         margin-left : 7%;
         display: inline-block;
         vertical-align: top;
@@ -81,7 +81,7 @@ html , body {
 }
 
 @media screen and (max-width : 1724px) {
-    #work_detail {
+    #work_detail , #work_detail2{
         display: inline-block;
         vertical-align: top;
     }
@@ -140,6 +140,10 @@ html , body {
     margin-top : 51px;
 }
 
+#worker2 {
+    margin-top : 51px;
+}
+
 #main .project {
     margin-top : 50px;
 }
@@ -150,7 +154,7 @@ html , body {
     font-weight: 700;
 }
 
-#main .project_category {
+#main .project_category  , .project_category2{
     font-family : 'Noto Sans DemiLight';
     font-size : 14px;
     margin-top : 11px;
@@ -164,6 +168,10 @@ html , body {
     margin-top : 18px;
 }
 
+.member .member_div2 {
+    margin-top : 18px;
+}
+
 .member .member_element {
     margin-top : 5px;
 }
@@ -174,19 +182,31 @@ html , body {
     font-weight: 700;
 }
 
+#main .project_member2 {
+    font-family : 'Noto Sans Regular';
+    font-size : 16px;
+    font-weight: 700;   
+}
+
 .member .member_div p {
     font-family: 'Noto Sans DemiLight';
     font-size : 14px;
     text-decoration: underline;
 }
 
+.member .member_div2 p {
+    font-family: 'Noto Sans DemiLight';
+    font-size : 14px;
+    text-decoration: underline;   
+}
+
 @media screen and (min-width : 1150px) {
-    .member_div .member_left {
+    .member_div .member_left , .member_div2 .member_left{
         width : 43%;
         display : inline-block;
     }
 
-    .member_div .member_right {
+    .member_div .member_right , .member_div2 .member_right{
         vertical-align:top;
         display : inline-block;
         margin-left : 20px;
@@ -195,12 +215,12 @@ html , body {
 }
 
 @media screen and (max-width : 1149px) {
-    .member_div .member_left {
+    .member_div .member_left , .member_div , .member_left{
         width : 100%;
         display : block;
     }
 
-    .member_div .member_right {
+    .member_div .member_right , .member_div , .member_right{
         vertical-align:top;
         display : block;
         width : 100%;
@@ -215,13 +235,17 @@ html , body {
     margin-top :11px;
 }
 
+.member_div2 .member_right p {
+    margin-top : 11px;
+}
+
 .arrow {
     margin-left : 13px;
     padding-bottom : 3px;
     cursor:  pointer;
 }
 
-#member_arrow {
+#member_arrow , #member_arrow2{
     margin-left : 17px;
 }
 

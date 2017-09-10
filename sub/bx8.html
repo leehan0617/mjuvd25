@@ -73,6 +73,45 @@
                         </div>
                     </div>
                 </section>
+
+                <section id="worker2">
+                    <img src="../img/sub_person/simseungmi.png"/>
+                    <div id="work_detail2">
+                        <p class="work_name">심 승 미</p>
+                        <p class="work_english_name">Sim Seungmi</p>
+                        <p class="work_phone">010.8588.8915</p>
+                        <p class="work_email">ssm625@naver.com</p>
+                    </div>
+                </section>
+                <section class="project">
+                    <span class="project_title">Project</span>
+                    <img id="project_arrow2" class="arrow" src="../img/under_arrow.png" style="margin-left:25px;"/>
+                    <p class="project_category2" style="margin-top:24px;">Brand Experience</p>
+                    <p class="project_category2">UX Design</p>
+                </section>
+                <section class="member">
+                    <span class="project_member">Member</span>
+                    <img id="member_arrow2" class="arrow" src="../img/under_arrow.png"/>
+                    <div class="member_div2">
+                        <div class="member_left">
+                            <p onclick="javascript:location.href='bx1.html'">Kwon Huiae</p>
+                            <p onclick="javascript:location.href='bx2.html'">Kim Nayoung</p>
+                            <p onclick="javascript:location.href='bx3.html'">Kim Jaeo</p>
+                            <p onclick="javascript:location.href='bx4.html'">Kim Hyunjoo</p>
+                            <p onclick="javascript:location.href='bx5.html'">Seo Younggyeong</p>
+                            <p onclick="javascript:location.href='bx6.html'">Woo Junbeom</p>
+                            <p onclick="javascript:location.href='bx7.html'">Lee Hanna</p>
+                            <p onclick="javascript:location.href='bx8.html'">Kim Suyeon/Sim Seungmi</p>
+                            <p onclick="javascript:location.href='bx9.html'">Kim Sua/Yang Eunseock</p>
+                            <p onclick="javascript:location.href='bx10.html'">Lim Hayoung/Choi Hyungwoo</p>
+                        </div>
+                        <div class="member_right">
+                            <p onclick="javascript:location.href='bx11.html'">Jung Heebin</p>
+                            <p onclick="javascript:location.href='bx12.html'">Jo Hyeonjung</p>
+                            <p onclick="javascript:location.href='bx13.html'">Choi Hojung</p>
+                        </div>
+                    </div>
+                </section>
             </section>
             <section id="work">
                 <div>
@@ -84,5 +123,15 @@
             </section>
         </section>
     </div>
+    <script>
+        $(function(){
+            projectFlag = false;
+            projectFlag2 = false;
+            memberFlag = false;
+            memberFlag2 = false;
+
+            $('.project_category2 , .project_category , .member_div , .member_div2').hide();
+        });
+    </script>
 </body>
 </html>
