@@ -1,7 +1,7 @@
-var projectFlag = true;
-var projectFlag2 = true;
-var memberFlag = true;
-var memberFlag2 = true;
+var projectFlag = false;
+var projectFlag2 = false;
+var memberFlag = false;
+var memberFlag2 = false;
 
 $(function() {
 	$('#project_arrow').on('click' , function() {
@@ -44,5 +44,7 @@ $(function() {
 
 	$('.vimeo_link').on('click' , function() {
 		location.href = "http://www.naver.com";
-	})
+	});
+
+	$('.project_category2 , .project_category , .member_div , .member_div2').hide();
 })

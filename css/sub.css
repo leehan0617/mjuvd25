@@ -109,6 +109,7 @@ html , body {
 }
 
 .work_email {
+    font-size : 14px;
     margin-top : 12px;
     font-family: 'Noto Sans Regular';
     line-height : 18px;
@@ -246,10 +247,10 @@ html , body {
 }
 
 #member_arrow , #member_arrow2{
-    margin-left : 17px;
+    margin-left : 15px;
 }
 
-.member_left p , .member_right p , nav ul li , .project_category , .ct_subject{
+.member_left p , .member_right p , nav ul li , .project_category , .project_category2 , .ct_subject{
     cursor : pointer;
 }
 
