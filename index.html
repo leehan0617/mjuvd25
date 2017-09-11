@@ -305,5 +305,22 @@
 		
   </div>
  </div>
+ <script>
+ var agent = navigator.userAgent.toLowerCase();
+ 
+	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+		var port_list = document.getElementById('port_list');
+		port_list.style.marginLeft = '2%';
+	}
+
+ 	var links = document.getElementsByClassName('slideEvent3');
+
+ 	for(var i = 0 ; i < links.length ; i ++) {
+ 		links[i].addEventListener('click' , function() {
+	 		var url = 'sub/' + this.id + '.html';
+	 		location.href=url;
+	 	});
+ 	}
+ </script>
 </body>
 </html>
