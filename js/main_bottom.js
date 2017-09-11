@@ -130,7 +130,7 @@ function intervalPlay01(start_num, end_num, img_type) {
 	var img_id = img_type + (i++) + "";
 	
 	//사진 돌아가면서
-	animate_image(img_id, div_id, '#ff3333');
+	animate_image(img_id, div_id, '#0099ff');
 	
 	personTimerId = setInterval(function() {
 	  if (i == end_num) {
@@ -141,7 +141,7 @@ function intervalPlay01(start_num, end_num, img_type) {
 		  img_id  = img_type + (i++);
 	  }
 	  
-	  animate_image(img_id, div_id, '#ff3333');
+	  animate_image(img_id, div_id, '#0099ff');
 		  
 	}, 1800);
 	
@@ -158,7 +158,7 @@ function mouse_over(id_num, param_id){
 	var div_id = "person_img";
 	var img_id = "person" + (i++) + "";
 	
-	animate_image(img_id, div_id, '#ff3333');
+	animate_image(img_id, div_id, '#0099ff');
 }
 /**
  * 작성일 : 2017.08.24
@@ -176,7 +176,7 @@ function mouse_out(id_num, end_num, param_id){
 	var div_id = "person_img";
 	var img_id = param_id + (i++) + "";
 	
-	animate_image(img_id, div_id, '#ff3333');
+	animate_image(img_id, div_id, '#0099ff');
 	
 	personTimerId = setInterval(function() {
 	  if (i == end_num) {
@@ -187,7 +187,7 @@ function mouse_out(id_num, end_num, param_id){
 		  img_id  = param_id + (i++);
 	  }
 	  
-	  animate_image(img_id, div_id, '#ff3333');
+	  animate_image(img_id, div_id, '#0099ff');
 		  
 	}, 1800);
 }
