@@ -133,7 +133,7 @@ html , body {
 #description .contents {
     margin-top : 20px;
     font-family : 'Noto Sans Regular';
-    font-size : 15px;
+    font-size : 14px;
     line-height: 28px;
 }
 
@@ -150,6 +150,8 @@ html , body {
 }
 
 #main .project_title {
+    display: inline-block;
+    width:63px;
     font-family: 'Noto Sans Regular';
     font-size : 16px;
     font-weight: 700;
@@ -178,12 +180,16 @@ html , body {
 }
 
 #main .project_member {
+    display: inline-block;
+    width:63px;
     font-family : 'Noto Sans Regular';
     font-size : 16px;
     font-weight: 700;
 }
 
 #main .project_member2 {
+    display: inline-block;
+    width:63px;
     font-family : 'Noto Sans Regular';
     font-size : 16px;
     font-weight: 700;   
@@ -247,11 +253,11 @@ html , body {
 }
 
 #member_arrow , #member_arrow2{
-    margin-left : 8.2%;
+    margin-left : 10px;
 }
 
 #project_arrow , #project_arrow2 {
-    margin-left : 11.6%;
+    margin-left : 10px;
 }
 
 .member_left p , .member_right p , nav ul li , .project_category , .project_category2 , .ct_subject{
