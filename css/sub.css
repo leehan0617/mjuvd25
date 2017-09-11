@@ -247,7 +247,11 @@ html , body {
 }
 
 #member_arrow , #member_arrow2{
-    margin-left : 17px;
+    margin-left : 8.2%;
+}
+
+#project_arrow , #project_arrow2 {
+    margin-left : 11.6%;
 }
 
 .member_left p , .member_right p , nav ul li , .project_category , .project_category2 , .ct_subject{
