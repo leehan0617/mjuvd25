@@ -36,7 +36,7 @@
 			<p class="text-main-title">
 				<img alt="ROUNDABOUT" src="img/ROUNDABOUT.png"/>
 			</p>
-			<video class="header-video" id="header-video" poster="pre_mobile.png">
+			<video class="header-video" id="header-video">
 				<source src="main_video.mp4"></source>
 			</video>
 		</div>
@@ -312,9 +312,22 @@
  	}
 
  	var video = document.getElementById('header-video');
+	
 	video.addEventListener('click' , function(){
 		this.play();
 	});
+	
+	var filter = "win16|win32|win64|mac|macintel";
+	 
+	if(navigator.platform){
+		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+			video.poster = "pre_mobile.png";
+		}else{
+			video.autoplay = "true";
+			video.loop = "true";
+		}
+	}
+	
  </script>
 </body>
 </html>
