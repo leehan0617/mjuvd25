@@ -62,7 +62,6 @@ li{
 	height: auto;
 	max-width: 100%;
 	width:auto;
-	margin-right:5%;
 }
 .graduates_div{
 	font-size:60px; 
@@ -120,7 +119,7 @@ li{
 	list-style:none; 
 	padding:0; 
 	margin-top:0px; 
-	margin-left:24%; 
+	margin-left:17%; 
 	display:inline-block; 
 }
 .person_img{
