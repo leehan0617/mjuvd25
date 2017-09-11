@@ -3,13 +3,14 @@
  * 작성일 : 2017.09.11
  * 설명 : 동영상 재생 버튼
  */
-
+/*
 window.onload = function() {
 	var video = document.getElementById('header-video');
 	video.addEventListener('click' , function(){
 		this.play();
 	});
 }
+*/
 
 /**
  * 작성일 : 2017.09.11
