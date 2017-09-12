@@ -186,7 +186,6 @@ function mouse_out(id_num, end_num, param_id){
 	  else {
 		  img_id  = param_id + (++i);
 	  }
-	  console.log(img_id)
 	  
 	  animate_image(img_id, div_id, '#0099ff');
 		  
