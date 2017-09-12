@@ -172,20 +172,21 @@ function mouse_out(id_num, end_num, param_id){
 		id_num = 0;
 	}
 	
-	var i = id_num*1+1;
+	var i = id_num*1;
 	var div_id = "person_img";
-	var img_id = param_id + (i++) + "";
+	var img_id = param_id + (++i) + "";
 	
 	animate_image(img_id, div_id, '#0099ff');
 	
 	personTimerId = setInterval(function() {
 	  if (i == end_num) {
-		  img_id  = param_id + (i);
 		  i = 1;
+		  img_id  = param_id + (i);
 	  }
 	  else {
-		  img_id  = param_id + (i++);
+		  img_id  = param_id + (++i);
 	  }
+	  console.log(img_id)
 	  
 	  animate_image(img_id, div_id, '#0099ff');
 		  
