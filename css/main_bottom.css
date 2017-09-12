@@ -27,6 +27,7 @@
 .font05{
 	font-size:17px;
 	text-decoration:underline;
+	font-family : 'Noto Sans Light';
 }
 .font06{
 	font-size:14px;
@@ -35,6 +36,7 @@
 .font07{
 	font-size:17px;
 	text-decoration:underline;
+	font-family : 'Noto Sans Light';
 }
 li{
 	position:relative;
@@ -137,6 +139,11 @@ li{
   .person_img{
 	margin-left:3%; 
 	}
+}
+
+.direction_left {
+	display:  inline-block;
+	width:130px;
 }
 
 /*#bus_div {
