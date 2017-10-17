@@ -27,12 +27,7 @@ window.addEventListener('scroll', function(e) {
  * 설명 : 부드럽게 스크롤  
  */
 function runScroll(aa) {
-	var agent = navigator.userAgent.toLowerCase();
-	if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)){
-		scrollTo(document.documentElement,document.getElementById(aa).offsetTop, 600);
-	}else{
-		scrollTo(document.body,document.getElementById(aa).offsetTop, 600);
-	}
+	scrollTo(document.documentElement,document.getElementById(aa).offsetTop, 600);
 }
 
 function scrollTo(element, to, duration) {
